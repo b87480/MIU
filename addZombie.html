@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Joshua Whitney -->
+<!-- VFW 1305 -->
+<!-- Assignment 4 -->
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="A hit list of dangerous zombies." />
+		<meta name="keywords" content="zombies,hitman,hitlist,zombie comedy" />
+		<meta name="ROBOTS" content="index, nofollow" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<meta name="author" content="Joshua Whitney" />
+		
+		<link rel="stylesheet" type="text/css" href="css/zombie.css">
+
+
+		<title>Zombie Hit List</title>	
+	</head>
+
+	<body>
+		<div id="container">
+			<header>
+				<img id="logo" src="https://lh6.googleusercontent.com/-mishB1zoQiw/UY7E41mS5hI/AAAAAAAACMk/8p6oHSElmXk/w304-h39-no/banner3_03.png">
+			</header>
+			<nav id="nav1">
+				<ul>
+					<li id="but1"><a href="index.html"><img SRC="https://lh6.googleusercontent.com/-QuRjrdLX8_E/UY7IsTQznqI/AAAAAAAACM0/Mw4ogv0vSo0/w66-h17-no/BUTTONS_03.png"></a></li>
+					<li id="but2"><a href="addZombie.html" id="addzombie"><img src="https://lh3.googleusercontent.com/-75172QzwSxM/UY7IseCvgTI/AAAAAAAACMw/xFI5qbFi7vE/w45-h17-no/BUTTONS_05.png"></a></li>
+					<li id="but3"><a href="#" id="showzombie"><img src="https://lh4.googleusercontent.com/-8eq4-N0R3B8/UY7IsXZIioI/AAAAAAAACM8/cyFp3mY6Ulw/w67-h17-no/BUTTONS_07.png"></a></li>
+					<li id="but4"><a href="#" id="clearzombie"><img src="https://lh4.googleusercontent.com/-hkAG3ppPXqU/UY7IsssNPZI/AAAAAAAACM4/qRh1oQwdz8Y/w72-h17-no/BUTTONS_09.png"></a></li>
+				</ul>
+			</nav>
+			
+			<form action="#" method="post" id="myform">
+				<ul id="message"></ul>
+				<fieldset>
+					<legend>CLIENT INFORMATION</legend>
+				<div class="labelHead"><label class="headLabel">PLEASE REGISTER BEFORE ADDING A ZOMBIE</label></div>
+					<input type="text" id="fname" placeholder="First Name"  /><br>
+					<div id="mes1"></div>
+					<input type="text" id="lname" placeholder="Last Name"  /><br>
+					<div id="mes2"></div>
+					<input type="email" id="clientemail" placeholder="Email Address"  /><br>
+					<div id="mes3"></div>
+					<input type="tel" id="clienttelephone" placeholder="111-111-1111" /><br>
+					<div id="mes6"></div>
+				</fieldset><br>
+				<fieldset>
+					<legend>NEW ZOMBIE INFORMATION</legend>
+					
+		
+				<div class="labelHead"><label class="headLabel">ENTER ZOMBIES NAME</label></div>
+					<label for="firstname">First Name:</label>
+					<input type="text" id="firstname" placeholder="FirstName" /><br>
+					<div id="mes5"></div>
+					<label for="lastname">Last Name:</label>
+					<input type="text" id="lastname" placeholder="LastName" /><br>
+					<div id="mes4"></div>
+			
+				
+				<label class="headLabel">IS THE ZOMBIE MALE OR FEMALE?</label><br>
+					<input type="radio" class="radioButton" name="sex" value="male">Male<br>
+					<input type="radio" name="sex" value="female">Female<br>
+				
+				<label class="headLabel">IS THIS A PRIORITY HIT?</label><br>
+			<div id="check">
+					<input type="checkbox" id="immediate" name="priority" value="YES">YES!<br>
+			</div>
+				
+				<label class="headLabel">PLEASE SELECT YOUR WEAPON OF CHOICE</label><br>
+				<div id="select">
+					
+				</div>
+				
+				<label class="headLabel">EXPLAIN WHY THIS ZOMBIE SHOULD DIE</label><br>
+				<textarea name="text" rows="5" cols="40"> </textarea><br>
+				
+				<label class="headLabel">WHEN DO YOU WANT THIS DONE BY?</label><br>
+				<input type="date" id="deadLine" name="dated"/><br>
+				
+				<label class="headLabel">PLEASE RATE OUR SERVICES</label><br>
+				<input id="stars" type="range"  min="1" max="10"><br>
+				
+				<input type="hidden" id="customer" value="reputation">
+					
+				
+				<input id="button" type="button" value="SUBMIT">
+				</fieldset>
+				
+				
+			</form>
+			
+			<footer>
+				<p>
+					&copy; Copyright  by Joshua Whitney
+				</p>
+			</footer>
+		</div>
+		<script src="js/json.js" type="text/javascript"></script>
+		<script src="js/zombie.js" type="text/javascript"></script>
+	</body>
+</html>
