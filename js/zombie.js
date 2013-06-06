@@ -1,7 +1,7 @@
 /*
  		Joshua Whitney  
- 		VFW 1305 
-		Assignement 4
+ 		MIU 1306 
+		Assignement 1
  */
 
 window.addEventListener("DOMContentLoaded", function(){
@@ -367,3 +367,4 @@ var show = $('showzombie');
 
 
 });
+
