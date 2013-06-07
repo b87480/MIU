@@ -70,7 +70,12 @@ footer {
 .print {
 	list-style: none;
 }
-#logo {
+.weaponLi {
+	display: inline;
+	float: left;
+	margin:5px;
+}
+.logo {
 	float: left;
 	margin-top: -7px;
 	margin-left: -10px;
@@ -141,4 +146,17 @@ footer {
 	top: -50px;
 	clear: both;
 	position: relative;
+}
+#searchBox {
+	position: absolute;
+	z-index: 100;
+	left: 50px;
+	clear: both;
+	float: left;
+	top: 15px;
+	width: 200px;
+}
+#weaponInfo {
+	float: left;
+	clear: both;
 }

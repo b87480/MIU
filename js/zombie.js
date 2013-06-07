@@ -35,6 +35,7 @@ var weaponChoice = ["--Select Your Weapon of Choice!--", "Gun", "Grenade", "Crow
 		}
 		
 	}
+
 	function hideAndShow(x){
 		switch(x){
 			case "on":
@@ -346,7 +347,7 @@ var weaponChoice = ["--Select Your Weapon of Choice!--", "Gun", "Grenade", "Crow
 				storeData(this.key);
 			}
 			
-	}		
+	}	
 	
 
 			
@@ -360,6 +361,7 @@ var clear = $('clearzombie');
 	clear.addEventListener("click", clearData);
 var show = $('showzombie');
 	show.addEventListener("click", showZombie);
+
 
 
 
