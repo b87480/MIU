@@ -35,20 +35,20 @@ var weaponChoice = ["--Select Your Weapon of Choice!--", "Gun", "Grenade", "Crow
 		}
 		
 	}
-
+	
 	function hideAndShow(x){
 		switch(x){
 			case "on":
 				$('myform').style.display = "none";
-				$('clearzombie').style.display = "inline";
-				$('showzombie').style.display = "none";
-				$('addzombie').style.display = "inline";
+				$('clearzombie').style.display = "block";
+				$('showzombie').style.display = "block";
+				$('addzombie').style.display = "block";
 				break;
 			case "off":	
 				$('myform').style.display = "block";
-				$('clearzombie').style.display = "inline";
-				$('showzombie').style.display = "inline";
-				$('addzombie').style.display = "none";
+				$('clearzombie').style.display = "block";
+				$('showzombie').style.display = "block";
+				$('addzombie').style.display = "block";
 				$('data').style.display = "none";
 				break;
 		}
@@ -184,7 +184,7 @@ var weaponChoice = ["--Select Your Weapon of Choice!--", "Gun", "Grenade", "Crow
 		navLi.style.marginTop = "10px";
 		navLi.style.marginBottom = "20px";
 		var newLink = document.createElement('a');
-		    newLink.href = "#";
+		    newLink.href = "#add";
 		newLink.key = key;
 		newLink.style.border = "2px solid red";
 		newLink.style.padding = "5px";
