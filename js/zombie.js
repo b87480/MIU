@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 
 //Global Variables
-var weaponChoice = ["--Select Your Weapon of Choice!--", "Gun", "Grenade", "Crowbar", "Bazooka", "Knife"],
+var weaponChoice = ["--Weapon of Choice!--", "Gun", "Grenade", "Crowbar", "Bazooka", "Knife"],
 	newCheck = "NO";
 	errorMessage = $('message');
 	mes1 = $('mes1');
@@ -23,6 +23,7 @@ var weaponChoice = ["--Select Your Weapon of Choice!--", "Gun", "Grenade", "Crow
 		var myElement = document.getElementById(x);
 		return myElement;
 	}
+	
 	function radioButtons() {
 		var radios = $('myform').sex;
 		var arr = [];
@@ -240,7 +241,7 @@ var weaponChoice = ["--Select Your Weapon of Choice!--", "Gun", "Grenade", "Crow
 		}
 			$('weapons').value = info.weap[1];
 			$('myform').text.value = info.write[1];
-		        $('stars').value = info.rate[1];
+		    $('stars').value = info.rate[1];
 			$('deadLine').value = info.date[1];
 			$('customer').value = info.inv[1];
 			

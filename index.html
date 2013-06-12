@@ -15,8 +15,10 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
+	
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -25,55 +27,70 @@
 <body>
 	<div data-role="page" id="home" data-theme="a"><!--HOME PAGE-->
 			<div data-role="header" data-position="fixed">
-				<!--<div data-role="navbar">
-					<ul>
-						<li><a href="#home" data-transition="slidefade" class="ui-btn-active ui-state-persist">HOME</a></li>
-						<li><a href="#add" data-transition="slidefade">ADD ZOMBIE</a></li>
-						<li><a href="#search" data-transition="slidefade">SEARCH</a></li>
-					</ul>
-
-					</div>-->
-					
+				<h1>ZOMBIES</h1>
+				
 				</div>
 			<div data-role="content">
+				
+				<ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Find Zombies...">
+					    <li><a href="#">Generic Zombie</a></li>
+					    <li><a href="#">Zombies of Romero</a></li>
+					    <li><a href="#">Zombies of Scientific Origin</a></li>
+					    <li><a href="#">Brooks Zombies</a></li>
+					    <li><a href="#">Fast Infected Zombies</a></li>
+					    <li><a href="#">Zombies of Ma</a></li>
+					    <li><a href="#">Resident Evil Zombies</a></li>
+					    <li><a href="#">The Crazies</a></li>
+					    <li><a href="#">Nazi Zombies</a></li>
+					    <li><a href="#">Cybernetic Zombies</a></li>
+					    <li><a href="#">BLACKLIGHT Zombies</a></li>
+					    <li><a href="#">Zombies of the Supernatural</a></li>
+					    <li><a href="#">Necromorphs</a></li>
+					    <li><a href="#">Voodoo Zombies</a></li>
+					    <li><a href="#">Star Wars Zombies</a></li>
+					    <li><a href="#">Inferi(Harry Potter Zombies)</a></li>
+					    <li><a href="#">REC zombies</a></li>
+					    <li><a href="#">Intelligent Zombies</a></li>
+					    <li><a href="#">Rot and Ruin Zombies</a></li>
+				</ul>
+				<a href="#add"><img src="images/CTA3.png" style="display:block; position:relative; margin-left:-7px;"></a>
+				<ul data-role="listview" data-inset="true">
 
-				<div id="back">
-					<a href="#add"><img src="images/homeZombie.jpg" id="picture" style="position:relative; width:110%; left:-15px; top:-20px;"></a>
-
-				</div>
-
+				    <li data-role="list-divider" data-theme="a">BROWSE WEAPONS</li>
+				    <li><a href="#all">ALL</a></li>
+				    <li><a href="#">GUN</a></li>
+				    <li><a href="#">GRENADE</a></li>
+				    <li><a href="#">CROWBAR</a></li>
+				    <li><a href="#">BAZOOKA</a></li>
+				    <li><a href="#">KNIFE</a></li>
+				</ul>
 
 				
 			</div>
-			<!--<div data-role="footer" data-position="fixed">
-				<div data-role="navbar">
+
+		<div data-role="footer" data-position="fixed">	
+			<div data-role="navbar">
 					<ul>
-						<li><a href="#weapons" data-transition="slidefade">WEAPONS</a></li>
-						<li><a href="#show" data-transition="slidefade">ZOMBIES</a></li>
-						<li><a href="#delete" data-transition="slidefade">CLEAR</a></li>
+						<li><a href="#home" data-icon="home"data-transition="slidefade" class="ui-btn-active ui-state-persist">HOME</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD ZOMBIE</a></li>
+						<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
+						<li><a href="#links" data-icon="bars" data-transition="slidefade">LINKS</a></li>
+						
 					</ul>
 
-				</div>
-
-			</div>-->
-		
+					</div>
+		</div>
 	</div><!--END HOME PAGE-->
 
 	<div data-role="page" id="add" data-theme="a"><!--ADD ZOMBIE PAGE-->
-			<div data-role="header" data-position="fixed">
-				<div data-role="navbar" >
-					<ul>
-						<li><a href="#home">HOME</a></li>
-						<li><a href="#add" class="ui-btn-active ui-state-persist">ADD ZOMBIE</a></li>
-						<li><a href="#search">SEARCH</a></li>
-					</ul>
-
-				</div>
+			<div data-role="header" data-position="fixed" data-rel="back">
+				<h1>ADD ZOMBIE</h1>
+				<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
 				</div>
 			<div data-role="content">
 					<div data-role="navbar">
 				<ul>
-					<li><a href="#" id="addzombie" data-role="button" data-inline="true">ADD</a></li>
+					<li><a href="#" id="addzombie" data-role="button" data-inline="true" class="ui-btn-active ui-state-persist">ADD</a></li>
 					<li><a href="#" id="showzombie" data-role="button" data-inline="true">SHOW ALL</a></li>
 					<li><a href="#" id="clearzombie" data-role="button" data-inline="true">CLEAR ALL</a></li>
 					
@@ -121,7 +138,7 @@
 					<input type="radio" class="radioButton" name="sex" value="male">Male<br>
 					<input type="radio" name="sex" value="female">Female<br> -->
 				
-				<fieldset data-role="controlgroup">
+				<fieldset data-role="controlgroup" data-inset="tue">
 					<legend>IS THE ZOMBIE MALE OR FEMALE?</legend>
 							<label for="radio-choice-1">Male</label>
 							<input type="radio" id="radio-choice-1" class="radioButton" name="sex" value="male">
@@ -130,12 +147,14 @@
 				</fieldset>
 				<!--<label class="headLabel">IS THIS A PRIORITY HIT?</label><br>-->
 			<div id="check">
-					<!--<input type="checkbox" id="immediate" name="priority" value="YES">YES!<br>-->
-					<label for="immediate">IS THIS A PRIORITY HIT?:</label>
+				<label for="immediate">IS THIS A PRIORITY HIT?</label>
+					<input type="checkbox" id="immediate" name="priority" value="YES">YES!<br>
+				
+					<!--<label for="immediate">IS THIS A PRIORITY HIT?:</label>
 					<select name="priority" id="immediate" data-role="slider">
 						<option value="NO">NO</option>
 						<option value="YES">YES</option>
-					</select>
+					</select>-->
 			</div>
 				
 				<label class="headLabel">WEAPON OF CHOICE</label><br>
@@ -162,7 +181,130 @@
 			</form>
 
 			</div>
+			<div data-role="footer" data-position="fixed">	
+			<div data-role="navbar" data-position="fixed">
+					<ul>
+						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade" class="ui-btn-active ui-state-persist">ADD ZOMBIE</a></li>
+						<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
+						<li><a href="#links" data-icon="bars" data-transition="slidefade">LINKS</a></li>
+					</ul>
+
+					</div>
+		</div>
+
 	</div><!--END ADD ZOMBIE PAGE-->
+
+	<div data-role="page" id="about" data-theme="a"><!--ABOUT PAGE-->
+			<div data-role="header" data-position="fixed">
+				<h1>ABOUT</h1>
+				<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
+					
+				</div>
+			<div data-role="content">
+
+				<div id="back">
+					
+
+				</div>
+
+
+				
+			</div>
+		<div data-role="footer" data-position="fixed">	
+			<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD ZOMBIE</a></li>
+						<li><a href="#about" data-icon="info" data-transition="slidefade" class="ui-btn-active ui-state-persist">ABOUT</a></li>
+						<li><a href="#links" data-icon="bars" data-transition="slidefade">LINKS</a></li>
+					</ul>
+
+					</div>
+		</div>
+	</div><!--END ABOUT PAGE-->
+
+	<div data-role="page" id="links" data-theme="a"><!--LINKS PAGE-->
+			<div data-role="header" data-position="fixed">
+				<h1>LINKS</h1>
+				<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
+					
+				</div>
+			<div data-role="content">
+
+				<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+    				<div data-role="collapsible">
+       				 	<h3>GitHub Repos</h3>
+        				<h3>Here are all of the git hub repos for this app</h3>
+        				<a href="#home" data-role="button" >MIU MASTER</a>
+        				<a href="#home" data-role="button" >GOLD</a>
+        				<a href="#home" data-role="button" >BRONZE</a>
+    				</div>
+    			<div data-role="collapsible">
+        				<h3>RESOURCES</h3>
+       					<p>What was used to make this app</p>
+       					<a href="#home" data-role="button" >MIU MASTER</a>
+       					<a href="#home" data-role="button" >MIU MASTER</a>
+       					<a href="#home" data-role="button" >MIU MASTER</a>
+       					<a href="#home" data-role="button" >MIU MASTER</a>
+    			</div>
+    				<div data-role="collapsible">
+        				<h3>Section 3</h3>
+        				<p>I'm the collapsible content for section 3</p>
+    				</div>
+				</div>
+						<a href="#home" data-role="button">GOLD APP</a>
+						<a href="#home" data-role="button">BRONZE APP</a>
+						
+				
+			</div>
+		<div data-role="footer" data-position="fixed">	
+			<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD ZOMBIE</a></li>
+						<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
+						<li><a href="#links" data-icon="bars" data-transition="slidefade" class="ui-btn-active ui-state-persist">LINKS</a></li>
+					</ul>
+
+					</div>
+		</div>
+	</div><!--END LINKS PAGE-->
+
+	<div data-role="page" data-theme="a" id="all">
+	<div data-role="header" data-position="fixed">
+		<h1>ALL Weapons</h1>
+	</div>
+	<div data-role="content">
+
+		 <div class="ui-grid-a">
+			    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/gun.png"></div></div>
+			    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/crowbar.png"></div></div>
+			</div><!-- /grid-1 -->
+		
+		<div class="ui-grid-a">
+		    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/grenade.png"></div></div>
+		    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/knife.png"></div></div>
+		</div><!-- /grid-2 -->
+		
+		<div class="ui-grid-a">
+		    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/bazooka.png"></div></div>
+		    
+		</div><!-- /grid-3 -->
+
+
+
+
+
+
+
+		</div>
+
+
+	</div><!-- END OF ALL WEAPONS PAGE-->
+			
+
+
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
