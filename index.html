@@ -35,7 +35,7 @@
 			
 			<div data-role="content">
 				<ul data-role="listview" data-filter-theme="a" data-filter="true" data-mimi="true" data-inset="true" data-filter-reveal="true" 
-					data-filter-placeholder="Find Zombies...">
+					data-filter-placeholder="Search...">
 					    <li><a href="#git">GITHUB REPOS</a></li>
 					    <li><a href="#add">ADD A ZOMBIE</a></li>
 					    <li><a href="#about">ABOUT ZOMBIE HIT LIST</a></li>
@@ -112,95 +112,123 @@
 			<div data-role="header" data-position="fixed" data-rel="back">
 				<h1>ADD ZOMBIE</h1>
 				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
-				</div>
-			<div data-role="content">
-					<div data-role="navbar">
+				<div data-role="navbar">
 				<ul>
 					<li><a href="#" id="addzombie" data-role="button" data-inline="true" class="ui-btn-active ui-state-persist">ADD</a></li>
 					<li><a href="#" id="showzombie" data-role="button" data-inline="true">SHOW ALL</a></li>
 					<li><a href="#" id="clearzombie" data-role="button" data-inline="true">CLEAR ALL</a></li>
 					
 				</ul>
-			</div>
+				</div>
+				</div>
+			<div data-role="content">
+				
 
 				<nav id="nav1">
 				
 					<!--<li id="but1"><a href="index.html">home</a></li>-->
 					
 				
-			</nav>
+				</nav>
 
 
 
 
 			<form action="#" method="post" id="myform">
 				<ul id="message"></ul>
-				<fieldset>
-					<legend>CLIENT INFORMATION</legend><br>
-				<div class="labelHead"><label class="headLabel"></label></div>
-					<input type="text" id="fname" placeholder="First Name"  /><br>
-					<div id="mes1"></div>
-					<input type="text" id="lname" placeholder="Last Name"  /><br>
-					<div id="mes2"></div>
-					<input type="email" id="clientemail" placeholder="Email Address"  /><br>
-					<div id="mes3"></div>
-					<input type="tel" id="clienttelephone" placeholder="111-111-1111" /><br>
-					<div id="mes6"></div>
-				</fieldset><br>
-				<fieldset>
-					<legend>NEW ZOMBIE INFORMATION</legend>
-					
-		
-				<div class="labelHead"><label class="headLabel"></label></div>
-					<label for="firstname">First Name:</label>
-					<input type="text" id="firstname" placeholder="FirstName" /><br>
-					<div id="mes5"></div>
-					<label for="lastname">Last Name:</label>
-					<input type="text" id="lastname" placeholder="LastName" /><br>
-					<div id="mes4"></div>
 			
+					<legend>CLIENT INFORMATION</legend>
+					
+				<div data-role="fieldcontain">
+					<label for="fname"></label>
+					<input type="text" name="fname" id="fname" placeholder="First Name"  />
+					<!--<div id="mes1"></div>-->
+				
+					<label for="lname"></label>
+					<input type="text" name="lname" id="lname" placeholder="Last Name"  />
+					<!--<div id="mes2"></div>-->
+				
+					<label for="clientemail"></label>
+					<input type="email" name="clientemail" id="clientemail" placeholder="Email Address"  />
+					<!--<div id="mes3"></div>-->
+				
+					<label for="clienttelephone"></label>
+					<input type="tel" name"clienttelephone" id="clienttelephone" placeholder="111-111-1111" />
+					<!--<div id="mes6"></div>-->
+				</div>
+
+				
+				<fieldset>
+
+
+					<legend>NEW ZOMBIE INFORMATION</legend>
+				<div data-role="fieldcontain">
+					<label for="firstname"></label>
+					<input type="text" name="firstname" id="firstname" placeholder="FirstName" />
+					<!--<div id="mes5"></div>-->
+					<label for="lastname"></label>
+					<input type="text" name="lastname" id="lastname" placeholder="LastName" />
+					<!--<div id="mes4"></div>-->
+				</div>
 				
 			<!--	<label class="headLabel">IS THE ZOMBIE MALE OR FEMALE?</label><br>
 					<input type="radio" class="radioButton" name="sex" value="male">Male<br>
 					<input type="radio" name="sex" value="female">Female<br> -->
-				
+			<div data-role="fieldcontain">	
 				<fieldset data-role="controlgroup" data-inset="tue">
 					<legend>IS THE ZOMBIE MALE OR FEMALE?</legend>
+							
+							<input type="radio" id="radio-choice-1" name="sex" value="male">
 							<label for="radio-choice-1">Male</label>
-							<input type="radio" id="radio-choice-1" class="radioButton" name="sex" value="male">
-							<label for="radio-choice-2">Female</label>
+							
 							<input type="radio" id="radio-choice-2" name="sex" value="female">
+							<label for="radio-choice-2">Female</label>
 				</fieldset>
+			</div>
 				<!--<label class="headLabel">IS THIS A PRIORITY HIT?</label><br>-->
-			<div id="check">
-				<label for="immediate">IS THIS A PRIORITY HIT?</label>
-					<input type="checkbox" id="immediate" name="priority" value="YES">YES!<br>
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+				
+					<input type="checkbox" id="immediate" name="priority" value="YES">
+					<label for="immediate">IS THIS A PRIORITY HIT?</label>
 				
 					<!--<label for="immediate">IS THIS A PRIORITY HIT?:</label>
 					<select name="priority" id="immediate" data-role="slider">
 						<option value="NO">NO</option>
 						<option value="YES">YES</option>
 					</select>-->
+				</fieldset>
 			</div>
-				
-				<label class="headLabel">WEAPON OF CHOICE</label><br>
+				<div data-role="fieldcontain">
+					<label for="weapons"></label>
+						<select name="weapons" id="weapons">
+							<option data-placeholder="true">WEAPON OF CHOICE</option>
+								<option value="gun">GUN</option>
+								<option value="knife">KNIFE</option>
+								<option value="grenade">GRENADE</option>
+								<option value="bazooka">BAZOOKA</option>
+								<option value="crowbar">CROWBAR</option>
+						</select>
+				</div>
+
+				<!--<label class="headLabel">WEAPON OF CHOICE</label><br>
 				<div id="select">
 					
-				</div>
+				</div>-->
 				
-				<label class="headLabel">DESCRIPTION OF ZOMBIE</label><br>
-				<textarea name="text" rows="5" cols="40"> </textarea><br>
+				<label for="text"></label>
+				<textarea id"text" name="text"> </textarea>
 				
-				<label class="headLabel">WHEN DO YOU WANT THIS DONE BY?</label><br>
+				<label class="headLabel">ZOMBIE SHOULD DIE ON?</label><br>
 				<input type="date" id="deadLine" name="dated"/><br>
 				
-				<label class="headLabel">PLEASE RATE OUR SERVICES</label><br>
-				<input id="stars" type="range"  min="1" max="10"><br>
+				<label for="stars"></label>
+				<input id="stars" name="stars" type="range"  value="0" min="1" max="10"><br>
 				
 				<input type="hidden" id="customer" value="reputation">
 					
 				
-				<input id="button" type="button" value="SUBMIT">
+				<input type="button" id="button" value="SUBMIT">
 				</fieldset>
 				
 				
@@ -228,12 +256,24 @@
 					
 				</div>
 			<div data-role="content">
-
-				<div id="back">
-					
-
+				<H2>JOSHUA WHITNEY</H2>
+				<img src="images/me.jpg" style="float:left;padding-right:5px;clear:both;">
+				<div style="position:relative;"
+				<p style="float:left;position:absolute;top:-20px;"> Born: California </br>Live: Asheville NC</br>    
+					    Loves: Family, Crossfit, Programming, Web Design, Mountain Biking.</p>
 				</div>
+				<h3>A Little Bit About Myself:</h3>
+				<p>I was born on the west coast and raised on the east coast. I've always had a strong passion for technology.
+					My dad raised me around computers, he was a programmer as well and started me out on a Coomodore 64!
+				</p>
+				<p>Throughout my life I have done a lot of things and I never thought programming would have been one of them.
+					Although I am still new to the actual programming side of technology I have found a passion in it like no other.
+					I hope to continue to learn and improve and build a successful career.</p>
 
+				<h3>ABOUT ZOMBIE HIT LIST:</h3>
+				<p>Basically I thought it would be fun to build an app where people could register to become a zombie killer and add hated zombies to a hit list.
+				The app is all in good fun. With all the hype around zombies these days, why not? So if you see a zombie make sure to register and add them to 
+				the Zombie Hit List!</p>
 
 				
 			</div>
@@ -449,7 +489,7 @@
 							<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
 							<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD</a></li>
 							<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
-							<li><a href="#links" data-icon="bars" data-transition="slidefade" class="ui-btn-active ui-state-persist">LINKS</a></li>
+							<li><a href="#links" data-icon="bars" data-transition="slidefade">LINKS</a></li>
 						</ul>
 
 						</div>

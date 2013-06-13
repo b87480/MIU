@@ -55,10 +55,10 @@ var weaponChoice = ["--Weapon of Choice!--", "Gun", "Grenade", "Crowbar", "Bazoo
 		}
 	}
 
-	function chooseWeapon(){
+/*	function chooseWeapon(){
 			var newTag = document.getElementsByTagName("form"); 
-					li = $('select');
 					selectIt = document.createElement('select');
+					li = $('select');
 					selectIt.setAttribute("id", "weapons");
 				for(var i=0, x=weaponChoice.length; i<x; i++){
 					var selection = document.createElement('option');
@@ -68,7 +68,7 @@ var weaponChoice = ["--Weapon of Choice!--", "Gun", "Grenade", "Crowbar", "Bazoo
 					selectIt.appendChild(selection);
 				}	
 				li.appendChild(selectIt);
-			}
+			}*/
 	
 	function clearData(){
 		if(localStorage.length === 0){
@@ -156,6 +156,8 @@ var weaponChoice = ["--Weapon of Choice!--", "Gun", "Grenade", "Crowbar", "Bazoo
 			var value = localStorage.getItem(key);
 			var json = JSON.parse(value);
 			var newList = document.createElement('ul');
+			newUl.style.listStyleType = "none";
+			newList.style.listStyleType = "none";
 			newUl.setAttribute("id", "mainUl");
 			newLi.appendChild(newList);
 			weaponImage(json.weap[1], newList);
@@ -177,18 +179,20 @@ var weaponChoice = ["--Weapon of Choice!--", "Gun", "Grenade", "Crowbar", "Bazoo
 		liImage.setAttribute("id", "pic");
 		newList.appendChild(liImage);
 		var img = document.createElement('img');
-		var setSrc = img.setAttribute("src", "images/"+ imgName +".png");
-		//img.setAttribute("id", "pic");
+		var setSrc = img.setAttribute("src", "images/images/"+ imgName +".png");
 		liImage.appendChild(img);
 	}
 	function newButtons(key, navLi){
 		navLi.style.marginTop = "10px";
 		navLi.style.marginBottom = "20px";
+		navLi.style.listStyleType = "none";
 		var newLink = document.createElement('a');
-		    newLink.href = "#add";
+		    newLink.href = "#";
 		newLink.key = key;
-		newLink.style.border = "2px solid red";
+		newLink.style.color = "red";
 		newLink.style.padding = "5px";
+		newLink.style.textDecoration = "none";
+		
 		var editText = "Edit Zombie";
 		newLink.addEventListener("click", editItem);
 		newLink.innerHTML = editText;
@@ -198,8 +202,9 @@ var weaponChoice = ["--Weapon of Choice!--", "Gun", "Grenade", "Crowbar", "Bazoo
 		var del = document.createElement('a');
 		    del.href = "#";
 		del.key = key;
-		del.style.border = "2px solid red";
 		del.style.padding = "5px";
+		del.style.textDecoration = "none";
+		del.style.color = "red";
 		
 		var delText = "Delete Zombie";
 		del.addEventListener("click", delItem);
@@ -248,116 +253,23 @@ var weaponChoice = ["--Weapon of Choice!--", "Gun", "Grenade", "Crowbar", "Bazoo
 		addZombie.removeEventListener("click", storeData);
 		$('button').value = "Save Zombie";
 		var editZombie = $('button');
-		editZombie.addEventListener("click", formValidation);
+		editZombie.addEventListener("click", storeData);
 		editZombie.key = this.key;
 		
 	} 
 		
-		function formValidation(x){
-			var clientName 		= $('fname');
-			var clientLast 		= $('lname');
-			var clientEmail		= $('clientemail');
-			var clientPhone		= $('clienttelephone');
-			var zombieFirst 	= $('firstname');
-			var zombieName 		= $('lastname');		
-			var errors 			= [];
+		//function formValidation(x){
 			
-			mes1.innerHTML = "";
-			mes2.innerHTML = "";
-			mes3.innerHTML = "";
-			mes4.innerHTML = "";
-			mes5.innerHTML = "";
-			mes6.innerHTML = "";
-		
-			clientName.style.color = "black";
-			clientName.style.border = "none";
-			clientLast.style.color = "black";
-			clientLast.style.border = "none";
-			zombieName.style.color = "black";
-			zombieName.style.border = "none";
-			zombieFirst.style.color = "black";
-			zombieFirst.style.border = "none";
-			clientEmail.style.color = "black";
-			clientEmail.style.border = "none";
-			
-			if(clientName.value == ""){
-				var noName = document.createElement('p');
-				noName.innerHTML = "! Please Enter a First Name !";
-				noName.style.color = "yellow";
-				clientName.style.color = "red";
-				clientName.style.border = "1px solid red";
-				mes1.appendChild(noName);
-				errors.push(noName);				
-			}
-			if(clientLast.value == ""){
-				var noLname = document.createElement('p');
-				noLname.innerHTML = "! Please Enter a Last Name !";
-				noLname.style.color = "yellow";
-				clientLast.style.color = "red";
-				clientLast.style.border = "1px solid red";
-				mes2.appendChild(noLname);
-				errors.push(noLname);
-			}
-			if(zombieName.value == ""){
-				var noZombie = document.createElement('p');
-				noZombie.innerHTML = "! Please Enter Zombies Last Name !";
-				noZombie.style.color = "yellow";
-				zombieName.style.color = "red";
-				zombieName.style.border = "1px solid red";
-				mes4.appendChild(noZombie);
-				errors.push(noZombie);
-			}
-			if(zombieFirst.value == ""){
-				var noFirst = document.createElement('p');
-				noFirst.innerHTML = "! Please Enter Zombies First Name !";
-				noFirst.style.color = "yellow";
-				zombieFirst.style.color = "red";
-				zombieFirst.style.border = "1px solid red";
-				mes5.appendChild(noFirst);
-				errors.push(noFirst);
-			}
-			var eval = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-			if(!eval.exec(clientEmail.value)){
-				var emailMessage = document.createElement('p');
-				emailMessage.innerHTML = "! Please Enter a Valid Email Address !";
-				emailMessage.style.color = "yellow";
-				clientEmail.style.color = "red";
-				clientEmail.style.border = "1px solid red";
-				mes3.appendChild(emailMessage);
-				errors.push(emailMessage);
-			}
-			var fone = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
-			if(!fone.exec(clientPhone.value)){
-				var phoneMessage = document.createElement('p');
-				phoneMessage.innerHTML = "! Please Enter a Valid Telephone Number !";
-				phoneMessage.style.color = "yellow";
-				clientPhone.style.color = "red";
-				clientPhone.style.border = "1px solid red";
-				mes6.appendChild(phoneMessage);
-				errors.push(phoneMessage);
-			}
-			if(errors.length >= 1){
-				for(i=0, j=errors.length; i<j; i++){
-					var mes = document.createElement('li');
-					mes.innerHTML = errors[i];
-				}
-				x.preventDefault();
-				return false;
-				
-			}else{
-				storeData(this.key);
-			}
-			
-	}	
+	//}	
 	
 
 			
-chooseWeapon();
+//chooseWeapon();
 
 
 
 var addZombie = $('button');
-	addZombie.addEventListener("click", formValidation);
+	addZombie.addEventListener("click", storeData);
 var clear = $('clearzombie');
 	clear.addEventListener("click", clearData);
 var show = $('showzombie');
