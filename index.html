@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 	
-	<title>Mobile Site Template</title>
+	<title>ZOMBIE HIT LIST</title>
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
@@ -15,9 +15,10 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
-	
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	
+
 	
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -25,54 +26,79 @@
 
 </head>
 <body>
-	<div data-role="page" id="home" data-theme="a"><!--HOME PAGE-->
+	<div data-role="page" id="home" data-theme=""><!--HOME PAGE-->
 			<div data-role="header" data-position="fixed">
-				<h1>ZOMBIES</h1>
-				
+				<h2>ZOMBIES</h2>
 				</div>
+				
+					
+			
 			<div data-role="content">
+				<ul data-role="listview" data-filter-theme="a" data-filter="true" data-mimi="true" data-inset="true" data-filter-reveal="true" 
+					data-filter-placeholder="Find Zombies...">
+					    <li><a href="#git">GITHUB REPOS</a></li>
+					    <li><a href="#add">ADD A ZOMBIE</a></li>
+					    <li><a href="#about">ABOUT ZOMBIE HIT LIST</a></li>
+					    <li><a href="#links">LINKS</a></li>
+					    <li><a href="#res">RESOURCES</a></li>
+					    <li><a href="#ref">REFERENCES</a></li>
+					    <li><a href="#gold">GOLD APP</a></li>
+					    <li><a href="#bronze">BRONZE APP</a></li>
+					    <li><a href="#all">WEAPON IMAGES</a></li>  
+					</ul>
 				
-				<ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Find Zombies...">
-					    <li><a href="#">Generic Zombie</a></li>
-					    <li><a href="#">Zombies of Romero</a></li>
-					    <li><a href="#">Zombies of Scientific Origin</a></li>
-					    <li><a href="#">Brooks Zombies</a></li>
-					    <li><a href="#">Fast Infected Zombies</a></li>
-					    <li><a href="#">Zombies of Ma</a></li>
-					    <li><a href="#">Resident Evil Zombies</a></li>
-					    <li><a href="#">The Crazies</a></li>
-					    <li><a href="#">Nazi Zombies</a></li>
-					    <li><a href="#">Cybernetic Zombies</a></li>
-					    <li><a href="#">BLACKLIGHT Zombies</a></li>
-					    <li><a href="#">Zombies of the Supernatural</a></li>
-					    <li><a href="#">Necromorphs</a></li>
-					    <li><a href="#">Voodoo Zombies</a></li>
-					    <li><a href="#">Star Wars Zombies</a></li>
-					    <li><a href="#">Inferi(Harry Potter Zombies)</a></li>
-					    <li><a href="#">REC zombies</a></li>
-					    <li><a href="#">Intelligent Zombies</a></li>
-					    <li><a href="#">Rot and Ruin Zombies</a></li>
-				</ul>
-				<a href="#add"><img src="images/CTA3.png" style="display:block; position:relative; margin-left:-7px;"></a>
-				<ul data-role="listview" data-inset="true">
-
-				    <li data-role="list-divider" data-theme="a">BROWSE WEAPONS</li>
-				    <li><a href="#all">ALL</a></li>
-				    <li><a href="#">GUN</a></li>
-				    <li><a href="#">GRENADE</a></li>
-				    <li><a href="#">CROWBAR</a></li>
-				    <li><a href="#">BAZOOKA</a></li>
-				    <li><a href="#">KNIFE</a></li>
-				</ul>
-
 				
+				<div data-role="controlgroup" class="content">
+				<a href="#add"><img src="images/ctaz.jpg" style="position:relative; margin-left:-15px;"></a>
+				</div>
+
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="b">
+				<a href="#all" data-role="button" data-icon="grid" data-theme="a">WEAPONS</a>
+				    <div data-role="collapsible">
+				        <h3>BAZOOKA</h3>
+				        <h3>THE BAZOOKA:</h3>
+				        <p>Great for killing multiple zombies at one time!</p>
+				        <p>The bazooka has a very high kill ratio but very slow re-load times!</p>
+				    </div>
+				    <div data-role="collapsible">
+				        <h3>CROWBAR</h3>
+				        <h3>THE CROWBAR:</h3>
+				        <p>Easy to use, no reloading, and fairly light weight.</p>
+				        <p>The crowbar can also be used for many different things as well, like opening cans of beans or beer bottles!</p>
+				        <p>The crowbar should only be used in a worse case scenario! It takes a lot of hits to the head with this weapon to kill a zombie!! This is not Hollywood people!</p>  
+				    </div>
+				    <div data-role="collapsible">
+				        <h3>GRENADE</h3>
+				        <h3>THE GRENADE:</h3>
+				        <p>The grenade is awesome!!!!, but you only get to use it once!</p>
+				        <p>And once again this is not Hollywood. Grenades do not blow up city blocks. It is a very small explosion that will kill zombies within a 5 to 10 foot radius.</p>
+				        <p>Unless your awesome and throw it at a gas station! The grenade should be a back up weapon at the very most. Save it till the end and maybe you can use it as a really cool firework show when all the zombies are dead!!!!</p>
+				    </div>
+				    <div data-role="collapsible">
+				        <h3>GUN</h3>
+				        <h3>THE GUN:</h3>
+				        <p>Great choice of weapon. But it depends on your aim, and how much ammo you have for it.</p>
+				        <p>The gun is easy to carry, use, clean and reload. Head shots with this weapon is ideal so practice, practice, practice!</p>
+				        <p style="color:red;"><strong>DO NOT TRY AND OPEN BEERS WITH THE GUN!</strong></p>
+				        <p>This does not work well and you will most likely make a lot of your commrades angry!</p>
+				    </div>
+				    <div data-role="collapsible">
+				        <h3>KNIFE</h3>
+				        <h3>THE KNIFE:</h3>
+				        <p>The must have for any zombie killer!</p>
+				        <p>But, be fore warned that killing zombies with a knife is messy and takes a lot of power and stamina. So if you are planning on using a knife you better practice with it and exercise like a beast!</p>
+				        <p>The knife is also a silent killer, so it won't attract a lot of attention from other zombies.</p>
+				        <p>This weapon is also great for opening things, cutting things and yes you guessed it OPENS BEERS!</p>
+				    </div>
+				</div>
+								
 			</div>
 
 		<div data-role="footer" data-position="fixed">	
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade" class="ui-btn-active ui-state-persist">HOME</a></li>
-						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD ZOMBIE</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD</a></li>
 						<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
 						<li><a href="#links" data-icon="bars" data-transition="slidefade">LINKS</a></li>
 						
@@ -85,7 +111,7 @@
 	<div data-role="page" id="add" data-theme="a"><!--ADD ZOMBIE PAGE-->
 			<div data-role="header" data-position="fixed" data-rel="back">
 				<h1>ADD ZOMBIE</h1>
-				<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
+				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 				</div>
 			<div data-role="content">
 					<div data-role="navbar">
@@ -185,7 +211,7 @@
 			<div data-role="navbar" data-position="fixed">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
-						<li><a href="#add" data-icon="plus" data-transition="slidefade" class="ui-btn-active ui-state-persist">ADD ZOMBIE</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade" class="ui-btn-active ui-state-persist">ADD</a></li>
 						<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
 						<li><a href="#links" data-icon="bars" data-transition="slidefade">LINKS</a></li>
 					</ul>
@@ -198,7 +224,7 @@
 	<div data-role="page" id="about" data-theme="a"><!--ABOUT PAGE-->
 			<div data-role="header" data-position="fixed">
 				<h1>ABOUT</h1>
-				<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
+				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 					
 				</div>
 			<div data-role="content">
@@ -215,7 +241,7 @@
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
-						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD ZOMBIE</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD</a></li>
 						<li><a href="#about" data-icon="info" data-transition="slidefade" class="ui-btn-active ui-state-persist">ABOUT</a></li>
 						<li><a href="#links" data-icon="bars" data-transition="slidefade">LINKS</a></li>
 					</ul>
@@ -227,42 +253,26 @@
 	<div data-role="page" id="links" data-theme="a"><!--LINKS PAGE-->
 			<div data-role="header" data-position="fixed">
 				<h1>LINKS</h1>
-				<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
+				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 					
 				</div>
 			<div data-role="content">
-
-				<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-    				<div data-role="collapsible">
-       				 	<h3>GitHub Repos</h3>
-        				<h3>Here are all of the git hub repos for this app</h3>
-        				<a href="#home" data-role="button" >MIU MASTER</a>
-        				<a href="#home" data-role="button" >GOLD</a>
-        				<a href="#home" data-role="button" >BRONZE</a>
-    				</div>
-    			<div data-role="collapsible">
-        				<h3>RESOURCES</h3>
-       					<p>What was used to make this app</p>
-       					<a href="#home" data-role="button" >MIU MASTER</a>
-       					<a href="#home" data-role="button" >MIU MASTER</a>
-       					<a href="#home" data-role="button" >MIU MASTER</a>
-       					<a href="#home" data-role="button" >MIU MASTER</a>
-    			</div>
-    				<div data-role="collapsible">
-        				<h3>Section 3</h3>
-        				<p>I'm the collapsible content for section 3</p>
-    				</div>
-				</div>
-						<a href="#home" data-role="button">GOLD APP</a>
-						<a href="#home" data-role="button">BRONZE APP</a>
-						
+	
+				<ul data-role="listview" data-inset="true">
+				    <li><a href="#git">GITHUB REPOS</a></li>
+				    <li><a href="#res">RESOURCES</a></li>
+				    <li><a href="#ref">REFERENCES</a></li>
+				    
+				</ul>
+						<a href="http://b87480.github.io/MIU" data-role="button">GOLD APP</a>
+						<a href="http://b87480.github.io/MIU" data-role="button" data-theme="b">BRONZE APP</a>
 				
 			</div>
 		<div data-role="footer" data-position="fixed">	
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
-						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD ZOMBIE</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD</a></li>
 						<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
 						<li><a href="#links" data-icon="bars" data-transition="slidefade" class="ui-btn-active ui-state-persist">LINKS</a></li>
 					</ul>
@@ -271,39 +281,181 @@
 		</div>
 	</div><!--END LINKS PAGE-->
 
-	<div data-role="page" data-theme="a" id="all">
-	<div data-role="header" data-position="fixed">
-		<h1>ALL Weapons</h1>
-	</div>
-	<div data-role="content">
+	<div data-role="page" id="git" data-theme="a"><!--GIT PAGE-->
+			<div data-role="header" data-position="fixed">
+				<h1>GITHUB REPOS</h1>
+				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
+					
+				</div>
+			<div data-role="content">
 
-		 <div class="ui-grid-a">
-			    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/gun.png"></div></div>
-			    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/crowbar.png"></div></div>
-			</div><!-- /grid-1 -->
-		
-		<div class="ui-grid-a">
-		    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/grenade.png"></div></div>
-		    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/knife.png"></div></div>
-		</div><!-- /grid-2 -->
-		
-		<div class="ui-grid-a">
-		    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px"><img src="images/bazooka.png"></div></div>
-		    
-		</div><!-- /grid-3 -->
+				<ul data-role="listview" data-inset="true" data-icon="info">
+				    <li><a href="https://github.com/b87480/MIU">MIU MASTER</a></li>
+				    <li><a href="https://github.com/b87480/MIU/tree/gh-pages" id="gold">GOLD</a></li>
+				    <li><a href="#" id="bronze">BRONZE</a></li>
+				</ul>
+			</div>
 
+<div data-role="footer" data-position="fixed">	
+			<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD</a></li>
+						<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
+						<li><a href="#links" data-icon="bars" data-transition="slidefade" class="ui-btn-active ui-state-persist">LINKS</a></li>
+					</ul>
 
-
-
-
-
-
+					</div>
 		</div>
+</div><!-- END GIT PAGE-->
 
+<div data-role="page" id="res" data-theme="a"><!--RESOURCES PAGE-->
+			<div data-role="header" data-position="fixed">
+				<h1>RESOURCES</h1>
+				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
+					
+				</div>
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" data-icon="star">
+				    <li><a href="http://www.jquerymobile.com">JqueryMobile</a></li>
+				    <li><a href="http://forum.jquery.com">Jquery Forums</a></li>
+				    <li><a href="http://www.fullsail.edu">Full Sail Univeristy</a></li>
+				    <li><a href="http://www.stackoverflow.com">Stack Overflow</a></li>
+				</ul>
+			</div>
 
-	</div><!-- END OF ALL WEAPONS PAGE-->
 			
 
+<div data-role="footer" data-position="fixed">	
+			<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD</a></li>
+						<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
+						<li><a href="#links" data-icon="bars" data-transition="slidefade" class="ui-btn-active ui-state-persist">LINKS</a></li>
+					</ul>
+
+					</div>
+		</div>
+</div><!--END RESOURCES PAGE-->
+
+<div data-role="page" id="ref" data-theme="a"><!--REFERENCES PAGE-->
+			<div data-role="header" data-position="fixed">
+				<h1>REFERENCES</h1>
+				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
+					
+				</div>
+			<div data-role="content">
+
+				<ul data-role="listview" data-inset="true" data-icon="star">
+				    <li><a href="http://zombie.wikia.com/wiki/Types_of_Zombies">ZombiePedia</a></li>
+				    
+				</ul>
+			</div>
+
+<div data-role="footer" data-position="fixed">	
+			<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
+						<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD</a></li>
+						<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
+						<li><a href="#links" data-icon="bars" data-transition="slidefade" class="ui-btn-active ui-state-persist">LINKS</a></li>
+					</ul>
+
+					</div>
+		</div>
+</div><!--END REFERENCES PAGE-->
+
+<div data-role="page" data-theme="a" id="all"><!---WEAPONS PAGE-->
+		<div data-role="header" data-position="fixed">
+			<h1>ALL Weapons</h1>
+			<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
+		</div>
+
+			<div data-role="content">
+
+				 <ul data-role="listview" data-split-icon="info" data-split-theme="a" data-inset="true">
+				    <li><a href="#">
+				        <img src="images/images/gun.png">
+				        <h2>Hand Gun</h2>
+				        <p>ooooh It's So Shinny!</p></a>
+				        <a href="#weapon1" data-rel="popup" data-position-to="window" data-transition="pop">Weapon Info</a>
+				    </li>
+				    <li><a href="#">
+				        <img src="images/images/gren.png">
+				        <h2>Grenade</h2>
+				        <p>Soooo Much Fun!</p></a>
+				        <a href="#weapon2" data-rel="popup" data-position-to="window" data-transition="pop">Weapon Info</a>
+				    </li>
+				    <li><a href="#">
+				        <img src="images/images/knife.png">
+				        <h2>Knife</h2>
+				        <p>Slice and Dice Baby!</p></a>
+				        <a href="#weapon3" data-rel="popup" data-position-to="window" data-transition="pop">Weapon Info</a>
+				    </li>
+				    <li><a href="#">
+				        <img src="images/images/baz.png">
+				        <h2>Bazooka</h2>
+				        <p>Yeah! You Better Run!</p></a>
+				        <a href="#weapon4" data-rel="popup" data-position-to="window" data-transition="pop">Weapon Info</a>
+				    </li>
+				    <li><a href="#">
+				        <img src="images/images/crow.png">
+				        <h2>Crowbar</h2>
+				        <p>Really?</p></a>
+				        <a href="#weapon5" data-rel="popup" data-position-to="window" data-transition="pop">Weapon Info</a>
+				    </li>
+				</ul>
+		<div data-role="popup" id="weapon1" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+		    <h2>THE HAND GUN:</h2>
+		    <p>Great choice of weapon. But it depends on your aim, and how much ammo you have for it.</p>
+		    <p>The gun is easy to carry, use, clean and reload. Head shots with this weapon is ideal so practice, practice, practice!</p>
+			<p style="color:red;"><strong>DO NOT TRY AND OPEN BEERS WITH THE GUN!</strong></p>
+			<p>This does not work well and you will most likely make a lot of your commrades angry!</p>
+		    <a href="index.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Close</a>
+		</div>
+		<div data-role="popup" id="weapon2" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+		    <h2>THE GRENADE:</h2>
+			<p>The grenade is awesome!!!!, but you only get to use it once!</p>
+	        <p>And once again this is not Hollywood. Grenades do not blow up city blocks. It is a very small explosion that will kill zombies within a 5 to 10 foot radius.</p>
+			<p>Unless your awesome and throw it at a gas station! The grenade should be a back up weapon at the very most. Save it till the end and maybe you can use it as a really cool firework show when all the zombies are dead!!!!</p>
+			<a href="index.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Close</a>
+		</div>
+		<div data-role="popup" id="weapon3" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+		    <h2>THE KNIFE:</h2>
+		    <p>The must have for any zombie killer!</p>
+		    <p>But, be fore warned that killing zombies with a knife is messy and takes a lot of power and stamina. So if you are planning on using a knife you better practice with it and exercise like a beast!</p>
+			<p>The knife is also a silent killer, so it won't attract a lot of attention from other zombies.</p>
+		    <p>This weapon is also great for opening things, cutting things and yes you guessed it OPENS BEERS!</p>
+		    <a href="index.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Close</a>
+		</div>
+		<div data-role="popup" id="weapon4" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+		    <h2>THE BAZOOKA:</h2>
+		    <p>Great for killing multiple zombies at one time!</p>
+			<p>The bazooka has a very high kill ratio but very slow re-load times!</p>
+		    <a href="index.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Close</a>
+		</div>
+		<div data-role="popup" id="weapon5" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+		    <h2>THE CROWBAR:</h2>
+		    <p>Easy to use, no reloading, and fairly light weight.</p>
+			<p>The crowbar can also be used for many different things as well, like opening cans of beans or beer bottles!</p>
+			<p>The crowbar should only be used in a worse case scenario! It takes a lot of hits to the head with this weapon to kill a zombie!! This is not Hollywood people!</p> 
+		    <a href="index.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Close</a>
+		</div>
+	</div>
+		<div data-role="footer" data-position="fixed">	
+				<div data-role="navbar">
+						<ul>
+							<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
+							<li><a href="#add" data-icon="plus" data-transition="slidefade">ADD</a></li>
+							<li><a href="#about" data-icon="info" data-transition="slidefade">ABOUT</a></li>
+							<li><a href="#links" data-icon="bars" data-transition="slidefade" class="ui-btn-active ui-state-persist">LINKS</a></li>
+						</ul>
+
+						</div>
+			</div>
+
+</div><!-- END OF ALL WEAPONS PAGE-->
 
 
 	<!-- JavaScript under here -->
