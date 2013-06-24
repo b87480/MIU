@@ -5,8 +5,14 @@ $('#home').on('pageinit', function(){
 $('#add').on('pageinit', function(){
 
         var myForm = $('#myform');
+//        var error = $('#errorlink');
             myForm.validate({
             invalidHandler: function(form, validator) {
+ //               error.click();
+ //               for(var key in validator.submitted){
+ //                   var label = $('label[for^="' + key +'"]');
+    //                  console.log(label.text());
+ //               }
             },
             submitHandler: function() {
         var data = myForm.serializeArray();
@@ -59,12 +65,7 @@ $('#clearbutton').click(function(){
 });
 function showData(data){
    
-   // $.each(data, function(key,val){
-     //   console.log(firstname.val);
+   
 }
 
-  /*if(!key){
-            var keyNum = Math.floor(Math.random()*1000001);
-        }else{
-            keyNum = key;
-        }*/
+  
