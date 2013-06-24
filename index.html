@@ -26,6 +26,7 @@
 
 </head>
 <body>
+
 	<div data-role="page" id="home" data-theme=""><!--HOME PAGE-->
 			<div data-role="header" data-position="fixed">
 				<h2>ZOMBIES</h2>
@@ -149,9 +150,10 @@
 	
 
 				<div data-role="fieldcontain">
+					<h4 style="color:red;">*Required Fields</h4>
 					<label for="fname"></label>
 			
-					<input type="text" name="fname" id="fname" placeholder="First Name" class="required"/>
+					<input type="text" name="fname" id="fname" placeholder="* First Name" class="required"/>
 					
 					
 					    <div id="mes1"></div>
@@ -161,15 +163,15 @@
 					
 					<label for="lname"></label>
 				
-					<input type="text" name="lname" id="lname" placeholder="Last Name" class="required name"/>
+					<input type="text" name="lname" id="lname" placeholder="* Last Name" class="required name"/>
 					<div id="mes2"></div>
 				
 					<label for="clientemail"></label>
-					<input type="email" name="clientemail" id="clientemail" placeholder="johndoe@whatever.com" class="required email"/>
+					<input type="email" name="clientemail" id="clientemail" placeholder="* johndoe@whatever.com" class="required email"/>
 					<div id="mes3"></div>
 				
 					<label for="clienttelephone"></label>
-					<input type="tel" name"clienttelephone" id="clienttelephone" placeholder="123-456-7890" class="required phone"/>
+					<input type="tel" name"clienttelephone" id="clienttelephone" placeholder="* 123-456-7890" class="required phone"/>
 					<div id="mes6"></div>
 				</div>
 
@@ -180,10 +182,10 @@
 					<legend>NEW ZOMBIE INFORMATION</legend>
 				<div data-role="fieldcontain">
 					<label for="firstname"></label>
-					<input type="text" name="firstname" id="firstname" placeholder="Zombie's FirstName" class="required"/>
+					<input type="text" name="firstname" id="firstname" placeholder="* Zombie's FirstName" class="required"/>
 					<div id="mes5"></div>
 					<label for="lastname"></label>
-					<input type="text" name="lastname" id="lastname" placeholder="Zombie's LastName" class="required"/>
+					<input type="text" name="lastname" id="lastname" placeholder="* Zombie's LastName" class="required"/>
 					<div id="mes4"></div>
 				</div>
 				
