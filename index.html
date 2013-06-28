@@ -28,18 +28,20 @@
 <body>
 
 	<div data-role="page" id="home" data-theme=""><!--HOME PAGE-->
-			<div data-role="header" data-position="fixed">
-				<h2>ZOMBIES</h2>
-				<a href="index.html" data-role="button" data-icon="logo2-zombie" data-iconpos="notext" class="ui-btn-left"></a>
-
-				<a href="#news" data-icon="bars" data-role="button" data-inline="true" data-theme="a" class="ui-btn-right">NEWS</a>
-
-				</div>
-				
-					
+		<div data-role="header"><h1>ZOMBIE</h1>
+			<a href="#news" id="news" data-icon="info" data-iconpos="notext" data-role="button" data-inline="true" data-theme="a" class="ui-btn-right"></a>
+		</div>
 			
+<div data-role="controlgroup" class="content">
+				<a href="#add"><img src="images/ctaz.jpg" style="position:relative;width:100%;"></a>
+				</div>
+
 			<div data-role="content">
-				<ul data-role="listview" data-theme="a" data-filter-theme="a" data-filter="true" data-mimi="true" data-inset="true" data-filter-reveal="true" 
+
+			
+				
+				<div style="position:relative;margin-left:10px;">
+					<ul data-role="listview" data-theme="a" data-filter-theme="a" data-filter="true" data-inset="true" data-filter-reveal="true"
 					data-filter-placeholder="Search...">
 					    <li><a href="#git">GITHUB REPOS</a></li>
 					    <li><a href="#add">ADD A ZOMBIE</a></li>
@@ -56,14 +58,11 @@
 					    <li><a href="#all">CROWBAR</a></li>
 					    <li><a href="#news">ZOMBIE NEWS</a></li>      
 					</ul>
+			</div>
 				
-				
-				<div data-role="controlgroup" class="content">
-				<a href="#add"><img src="images/ctaz.jpg" style="position:relative;"></a>
-				</div>
-
 			<div data-role="collapsible-set" data-theme="a" data-content-theme="a">
 				<a href="#all" data-role="button" data-icon="grid" data-theme="a">WEAPONS</a>
+				
 				    <div data-role="collapsible">
 				        <h3>BAZOOKA</h3>
 				        <h3>THE BAZOOKA:</h3>
@@ -101,10 +100,10 @@
 				        <p>This weapon is also great for opening things, cutting things and yes you guessed it OPENS BEERS!</p>
 				    </div>
 				</div>
-								
+						
 			</div>
 
-		<div data-role="footer" data-position="fixed">	
+		<div data-role="footer" data-position="fixed" data-id="foot">	
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade" class="ui-btn-active ui-state-persist">HOME</a></li>
@@ -120,20 +119,17 @@
 
 	<div data-role="page" id="add" data-theme="a"><!--ADD ZOMBIE PAGE-->
 	
-			<div data-role="header" data-position="fixed" data-rel="back">
+			
+
+			<div data-role="header" data-position="fixed" data-rel="back" data-id="hed">
 				<h1>ADD ZOMBIE</h1>
+				
 				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 
 				<a href="#" id="clearbutton" data-icon="alert" data-iconpos="notext" data-role="button" data-inline="true" data-theme="e" class="ui-btn-right"></a>
-			<!--	<div data-role="navbar">
-					<ul>
-						<li><button id="clearbutton" type="submit" id="button" value="Clear All" data-theme="b"></button></li>
-
-					</ul>
-
-				</div>-->
 				
 				</div>
+				<img src="images/images/headerMain.png">
 			<div data-role="content" id="addContent">
 				
 
@@ -255,7 +251,7 @@
 			</form>
 
 			</div>
-			<div data-role="footer" data-position="fixed">	
+			<div data-role="footer" data-position="fixed" data-id="foot">	
 			<div data-role="navbar" data-position="fixed">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
@@ -275,6 +271,7 @@
 				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 					
 				</div>
+				<img src="images/images/headerMain.png">
 			<div data-role="content">
 				<ul data-role="listview" data-inset="true">
 				    <li data-role="list-divider" data-theme="a">June 20, 2013 <span class="ui-li-count">2</span></li>
@@ -314,7 +311,7 @@
 		
 		
 
-	<div data-role="footer" data-position="fixed">	
+	<div data-role="footer" data-position="fixed" data-id="foot">	
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
@@ -334,6 +331,7 @@
 				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 					
 				</div>
+				<img src="images/images/headerMain.png">
 			<div data-role="content">
 				<H2>JOSHUA WHITNEY</H2>
 				<img src="images/me.jpg" style="float:left;padding-right:5px;clear:both;">
@@ -371,7 +369,7 @@
 		
 		
 
-	<div data-role="footer" data-position="fixed">	
+	<div data-role="footer" data-position="fixed" data-id="foot">	
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
@@ -386,11 +384,15 @@
 </div><!--END ABOUT PAGE-->
 
 	<div data-role="page" id="links" data-theme="a"><!--LINKS PAGE-->
+			
+			
+
 			<div data-role="header" data-position="fixed">
 				<h1>LINKS</h1>
 				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 					
 				</div>
+				<img src="images/images/headerMain.png">
 			<div data-role="content">
 	
 				<ul data-role="listview" data-inset="true">
@@ -403,7 +405,7 @@
 						<a href="http://b87480.github.io/MIU2/index.html" data-role="button" data-theme="a">BRONZE APP</a>
 				
 			</div>
-		<div data-role="footer" data-position="fixed">	
+		<div data-role="footer" data-position="fixed" data-id="foot">	
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
@@ -422,6 +424,7 @@
 				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 					
 				</div>
+				<img src="images/images/headerMain.png">
 			<div data-role="content">
 
 				<ul data-role="listview" data-inset="true" data-icon="info">
@@ -432,7 +435,7 @@
 				</ul>
 			</div>
 
-<div data-role="footer" data-position="fixed">	
+<div data-role="footer" data-position="fixed" data-id="foot">	
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
@@ -451,6 +454,7 @@
 				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 					
 				</div>
+				<img src="images/images/headerMain.png">
 			<div data-role="content">
 				<ul data-role="listview" data-inset="true" data-icon="star">
 				    <li><a href="http://www.jquerymobile.com">JqueryMobile</a></li>
@@ -462,7 +466,7 @@
 
 			
 
-<div data-role="footer" data-position="fixed">	
+<div data-role="footer" data-position="fixed" data-id="foot">	
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
@@ -481,6 +485,7 @@
 				<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 					
 				</div>
+				<img src="images/images/headerMain.png">
 			<div data-role="content">
 
 				<ul data-role="listview" data-inset="true" data-icon="star">
@@ -490,7 +495,7 @@
 				</ul>
 			</div>
 
-<div data-role="footer" data-position="fixed">	
+<div data-role="footer" data-position="fixed" data-id="foot">	
 			<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>
@@ -508,7 +513,7 @@
 			<h1>ALL Weapons</h1>
 			<a data-rel="back" data-icon="back" class="ui-btn-left">Back</a>
 		</div>
-
+<img src="images/images/headerMain.png">
 			<div data-role="content">
 
 				 <ul data-role="listview" data-split-icon="info" data-split-theme="a" data-inset="true">
@@ -580,7 +585,7 @@
 		    <a href="index.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Close</a>
 		</div>
 	</div>
-		<div data-role="footer" data-position="fixed">	
+		<div data-role="footer" data-position="fixed" data-id="foot">	
 				<div data-role="navbar">
 						<ul>
 							<li><a href="#home" data-icon="home"data-transition="slidefade">HOME</a></li>

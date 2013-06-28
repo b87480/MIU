@@ -1,5 +1,6 @@
 .ui-header .ui-title, .ui-footer .ui-title{
 	color: red;
+	font-family: chalkduster,arial,sans-serif
 }
 #home{
 	background-color: black;
@@ -9,4 +10,18 @@
 	
 
 
+}
+html.ui-mobile body.ui-mobile-viewport div#home.ui-page div.ui-content form.ui-listview-filter {
+	background-image: url(images/searchButton.png);
+	width: 100%;
+	z-index: 1000;
+}
+.ui-listview-filter .ui-input-search{
+	border-color: red;
+}
+.ui-btn-active{
+	font-family: chalkduster,arial,sans-serif;
+}
+.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a{
+	font-family: chalkduster,arial,sans-serif;
 }
